@@ -1,0 +1,358 @@
+/* start of eric meyer reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* end of eric meyer reset */
+
+
+@font-face {
+  font-family: 'big_shoulders_displaymedium';
+  src: url('bigshouldersdisplay-medium.woff2') format('woff2'),
+       url('bigshouldersdisplay-medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'big_shoulders_displayregular';
+  src: url('bigshouldersdisplay-regular.woff2') format('woff2'),
+       url('bigshouldersdisplay-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'big_shoulders_displaysemibold';
+  src: url('bigshouldersdisplay-semibold.woff2') format('woff2'),
+       url('bigshouldersdisplay-semibold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'monotonregular';
+  src: url('monoton-regular.woff2') format('woff2'),
+       url('monoton-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+body {
+    box-sizing: border-box;
+    height: 100vh;
+    background-image: url("../images/bg.svg");
+    background-size: cover;
+    background-position-y: 69.2%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* phone css style from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_device_smartphone */
+/* The device with borders */
+.smartphone {
+    position: relative;
+    /* 360 */
+    width: 320px;
+    /* 640 */
+    height: 550px;
+    margin: auto;
+    border: 16px black solid;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+    margin-top: 8px;
+}
+
+/* The horizontal line on the top of the device */
+.smartphone:before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 10px;
+}
+
+/* The circle on the bottom of the device */
+.smartphone:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+.smartphone .content {
+  /* 360 */
+  width: 320px;
+  /* 640 */
+  height: 100%;
+  background: #17e0ff;
+
+}
+
+/* 
+iframe {
+  width: 100%;
+  border: none;
+  height: 200%;
+  
+} */
+
+h1 {
+  padding-top: 48px;
+  /* font-family: 'Big Shoulders Display', cursive; */
+  font-family: 'big_shoulders_displaysemibold', cursive;
+  /* font-weight: 600; */
+  font-size: 2.9em;
+  text-align: center;
+  line-height: 1.2em;
+  position: relative;
+  z-index: 5;
+}
+
+h1 span {
+  text-transform: uppercase;
+  /* font-family: 'Monoton', cursive; */
+  font-family: 'monotonregular', cursive;
+  font-size: 1.2em;
+}
+
+#sheared-bg {
+  height: 109px;
+  width: 200px;
+  background-color: white;
+  transform: skew(-3deg, -3deg);
+  top: 49.6px;
+  opacity: 0.8;
+  position: absolute;
+  z-index: 3;
+}
+
+p {
+  /* font-family: 'Big Shoulders Display', cursive; */
+  font-family: 'big_shoulders_displayregular', cursive;
+  /* font-weight: 400; */
+  font-size: 1.5em;
+  padding: 0 24px;
+  text-align: center;
+  line-height: 1.4em;
+  margin-top: 56px;
+  max-width: 250px;
+}
+
+button {
+    text-transform: uppercase;
+    /* font-family: 'Big Shoulders Display', cursive; */
+    font-family: 'big_shoulders_displaymedium', cursive;
+    /* font-weight: 500; */
+    background-color: #fff345;
+    color: #8f61ed;
+    border: none;
+    font-size: 2.9em;
+    margin-top: 32px;
+    padding: 5px 19px;
+    border-radius: 3px;
+}
+
+input[type=submit] {
+  text-transform: uppercase;
+  /* font-family: 'Big Shoulders Display', cursive; */
+  font-family: 'big_shoulders_displaymedium', cursive;
+  /* font-weight: 500; */
+  background-color: #fff345;
+  color: #8f61ed;
+  border: none;
+  font-size: 2.9em;
+  margin-top: 32px;
+  padding: 5px 19px;
+  border-radius: 3px;
+  position: absolute;
+  left: 20.9%;
+  top: 450px;
+}
+
+#go-home-Btn {
+  position: absolute;
+  left: 20.9%;
+  top: 450px;
+}
+
+#start-btn, #to-invention, #to-skincare, #to-fact, #to-result, #go-home-Btn {
+  width: 186.02px;
+  height: 67px;
+  margin: 0 auto;
+}
+
+#start-btn {
+  margin-top: 32px;
+}
+
+h2 {
+  /* font-family: 'Big Shoulders Display', cursive; */
+  font-family: 'big_shoulders_displayregular', cursive;
+  /* font-weight: 400; */
+  font-size: 1.5em;
+  padding: 0 24px;
+  text-align: center;
+  line-height: 1.4em;
+  margin-top: 30px;
+}
+
+#ff-fix {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 12px;
+}
+
+label {
+  /* font-family: 'Big Shoulders Display', cursive; */
+  font-family: 'big_shoulders_displayregular';
+  /* font-weight: 400; */
+  font-size: 1.5em;
+  padding-right: 24px;
+  /* text-align: center; */
+  line-height: 1.4em;
+  max-width: 250px;
+  vertical-align: text-top;
+  padding-left: 8px;
+  line-height: 1.2;
+}
+
+input[type="radio"], label {
+  display: inline-block;
+  /* vertical-align: center; */
+  margin-top: -8px;
+  vertical-align: middle;
+}
+
+.radio {
+  display: flex;
+  flex-direction:column;
+} 
+
+input[type="radio"] {
+  transform: translateY(0.5em);
+}
+
+form {
+  max-width: 260px;
+}
+
+.hide {
+  display: none;
+}
+
+#activity input, #activity label, #invention input, #invention label, #skincare input, #skincare label, #fact input, #fact label {
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#result-copy {
+  font-size: 40px;
+  line-height: 46px;
+  font-family: 'big_shoulders_displaysemibold', cursive;
+  /* font-weight: 600; */
+  padding-top: 0;
+  margin-top: 0;
+  margin-top: 51px;
+  /* position: absolute;
+  top: -10px; */
+}
+
+#disclaimer {
+  max-width: 250px;
+  font-size: 8px;
+  line-height: 9px;
+  padding-top: 0;
+  margin-top: 0;
+  margin-top: 8px;
+  /* position: absolute;
+  top: 120px; */
+
+}
+
+#get-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 260px;
+  max-height: 200px;
+  margin-top: 18px;
+}
+
+#get-result img {
+  max-height: 200px;
+  max-width: 260px;
+}
